@@ -1,0 +1,53 @@
+:root{
+  --Montserrat: "Montserrat", sans-serif;
+  --primary-color-rgb: 2, 58, 92;
+  --secondary-color-rgb: 35, 35, 35;
+
+  --primary-color: rgb(var(--primary-color-rgb));
+  --secondary-color: rgb(var(--secondary-color-rgb));
+
+}
+
+body{
+  font-family: var(--Montserrat);
+}
+
+/* Navbar style */
+.navbar{
+  padding: 0.625rem 0;
+  margin: 0 6.25rem;
+}
+
+.navbar .header-logo{
+  width: 60%;
+}
+
+.navbar .navbar-nav .menu-title{
+  color: var(--secondary-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.navbar .icon .slide-down{
+  width: 8px;
+  font-size: 8px;
+  vertical-align: middle;
+}
+
+.navbar .nav-item .header-icon{
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+/* Footer style */
+footer{
+  background-color: var(--primary-color);
+  padding: 3.75rem 0;
+}
+
+footer > div{
+  padding: 0 5.625rem;
+  gap: 10rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}

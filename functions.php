@@ -65,6 +65,7 @@ if(! function_exists('goodlight_setup')):
       'flex-height' => true
     ]);
 
+
     /**
      * Add support for Custom Page Header
      */
@@ -84,17 +85,18 @@ if(! function_exists('goodlight_setup')):
     //This theme uses wp_nav_menu() in one location.
     register_nav_menus([
       'primary' => esc_html__('Primary','goodlight'),
-      'footer' => esc_html__('Footer-menu','goodlight')
+      'footer' => esc_html__('Footer-menu','goodlight'),
+      'header-right' => esc_html__('Header-right','goodlight')
     ]);
 
     /**
      * filters whether to show the admin bar 
      */
-    add_filter('show_admin_bar','__return_false');
-
+    add_filter('show_admin_bar','__return_false');  
   }
 endif;
 add_action('after_setup_theme','goodlight_setup');
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -132,7 +134,7 @@ add_action('widgets_init','goodlight_sidebar_widgets_init');
  * Enqueue public scripts and styles.
  */
 function goodlight_public_scripts() {
-
+  wp_enqueue_style( 'main', get_template_directory_uri().'/assets/css/main.css', [], wp_rand(), 'all' );
 }
 add_action('wp_enqueue_scripts','goodlight_public_scripts');
 
@@ -153,13 +155,12 @@ function get_menu_id($location){
   return $loc[$location];
 }
 
-
 /**
  * to get the child menu items of a particular parent menu item
  */
 function get_child_menu_items($menus, $parent_id){
   $child_menus = [];
-  
+
   if(!empty($menus)):
     foreach($menus as $menu):
       if(intval($menu->menu_item_parent) === $parent_id):
@@ -167,7 +168,6 @@ function get_child_menu_items($menus, $parent_id){
       endif;
     endforeach;
   endif;
-  
+
   return $child_menus;
-  
 }
