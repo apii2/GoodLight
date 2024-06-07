@@ -24,10 +24,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="page-width">
 
   <!-- NavBar -->
   <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid py-0 px-5 w-75">
+    <div class="container-fluid py-0 px-0 m-0">
 
       <!-- Page logo -->
       <?php
@@ -36,7 +37,7 @@
 
       if (has_custom_logo()):
         printf(
-          '<a class="navbar-brand me-0 py-3" href="%1$s"><img class="header-logo" width="170" src="%2$s"></a>',
+          '<a class="navbar-brand me-0 py-3" href="%1$s"><img class="header-logo w-100" width="170" src="%2$s"></a>',
           esc_url(home_url()),
           esc_url($logo[0])
         );
@@ -54,8 +55,9 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse relative-menu" id="navbarSupportedContent">
+        <!-- Title menu -->
+        <ul class="navbar-nav mb-2 mb-lg-0 w-100 justify-content-end">
           <?php
           $header_menu_id = get_menu_id('primary');
           $header_menus = wp_get_nav_menu_items($header_menu_id);
@@ -77,7 +79,7 @@
                     <button class="btn btn-secondary bg-transparent text-uppercase border-0 menu-title" type="button" data-bs-toggle="dropdown"
                       aria-expanded="false">
                       <?php esc_html_e($menu->title); ?>
-                      <div class="icon d-inline-block">
+                      <div class="icon d-inline-block ps-1">
                         <i class="fa-solid fa-chevron-down slide-down"></i>
                       </div>
                     </button>
@@ -100,28 +102,29 @@
           endif;
           ?>
         </ul>
-      </div>
 
-      <!-- Icon menu -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 mb-lg-0 gap-2">
-          <?php
-          $header_right_menu_id = get_menu_id('header-right');
-          $header_right_menus = wp_get_nav_menu_items($header_right_menu_id);
-          if (!empty($header_right_menus)):
-            foreach ($header_right_menus as $right_menu):
-              ?>
-              <li class="nav-item">
-                <a href="<?php echo esc_url($right_menu->url); ?>" class="nav-link px-0 py-0">
-                  <i class="header-icon <?php esc_html_e(implode(" ",$right_menu->classes)); ?>"></i>
-                </a>
-              </li>
-              <?php
-            endforeach;
-          endif;
-          ?>
-        </ul>
+        <!-- Icon menu -->
+        <div class="collapse navbar-collapse justify-content-end absolute-menu" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-3">
+            <?php
+            $header_right_menu_id = get_menu_id('header-right');
+            $header_right_menus = wp_get_nav_menu_items($header_right_menu_id);
+            if (!empty($header_right_menus)):
+              foreach ($header_right_menus as $right_menu):
+                ?>
+                <li class="nav-item">
+                  <a href="<?php echo esc_url($right_menu->url); ?>" class="nav-link px-0 py-0">
+                    <i class="header-icon <?php esc_html_e(implode(" ",$right_menu->classes)); ?>"></i>
+                  </a>
+                </li>
+                <?php
+              endforeach;
+            endif;
+            ?>
+          </ul>
+        </div>
       </div>
 
     </div>
   </nav>
+</div>

@@ -12,32 +12,68 @@ body{
   font-family: var(--Montserrat);
 }
 
+.page-width{
+  max-width: 1200px;
+  padding: 0 3.125rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-width{
+    margin: 0 auto;
+  }
+}
+
 /* Navbar style */
 .navbar{
   padding: 0.625rem 0;
-  margin: 0 6.25rem;
+}
+
+.navbar > div .navbar-brand{
+  width: 16%;
 }
 
 .navbar .header-logo{
   width: 60%;
 }
 
+.navbar .relative-menu{
+  position: relative;
+}
+
+.navbar .relative-menu > ul{
+  padding-right: 5.9375rem;
+}
+
 .navbar .navbar-nav .menu-title{
   color: var(--secondary-color);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 500;
+  padding: 0.3125rem;
 }
 
 .navbar .icon .slide-down{
   width: 8px;
   font-size: 8px;
   vertical-align: middle;
+  color: var(--secondary-color);
+}
+
+.navbar .absolute-menu {
+  position: absolute;
+  right: 0;
+  background-color: white;
 }
 
 .navbar .nav-item .header-icon{
-  font-size: 18px;
+  font-size: 20px;
   color: var(--primary-color);
 }
+
+/* Front page */
+.main-front img{
+  width: 100%;
+  max-height: 50rem;
+} 
 
 /* Footer style */
 footer{
@@ -46,8 +82,12 @@ footer{
 }
 
 footer > div{
-  padding: 0 5.625rem;
-  gap: 10rem;
-  font-size: 0.875rem;
+  padding: 0 3.125rem;
+  gap: 6rem;
+  font-size: 0.8125rem;
   font-weight: 500;
+}
+
+footer .footer-logo img{
+  width: 110%;
 }

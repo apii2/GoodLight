@@ -1,17 +1,17 @@
-<footer class="container-fluid px-0">
-  <div class="row">
-    <div class="col-2 px-0">
+<footer class="container-fluid px-0 w-100">
+  <div class="row m-0">
 
+    <!-- Footer logo -->
+    <div class="col-2 px-0">
       <div class="container-fluid px-0">
         <div class="row mb-4">
           <div class="col">
-            <!-- Footer logo -->
             <?php
             $custom_logo_id = get_theme_mod('header_image');
 
             if (has_header_image()):
               printf(
-                '<a class="navbar-brand" href="%1$s"><img width="170" src="%2$s"></a>',
+                '<a class="navbar-brand footer-logo" href="%1$s"><img width="170" src="%2$s"></a>',
                 esc_url(home_url()),
                 esc_url($custom_logo_id)
               );
@@ -43,6 +43,7 @@
       </div>
     </div>
 
+    <!-- Footer links -->
     <div class="col px-0">
       <div class="container-fluid">
         <div class="row">
