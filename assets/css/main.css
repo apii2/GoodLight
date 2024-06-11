@@ -75,6 +75,11 @@ body{
   max-height: 50rem;
 } 
 
+.main-content {
+  background-color: black;
+  color: white;
+}
+
 /* Footer style */
 footer{
   background-color: var(--primary-color);

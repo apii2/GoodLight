@@ -12,16 +12,16 @@ get_header();
 
 <div class="main-front page-width">
   <?php
-  if(has_post_thumbnail()):
-    the_post_thumbnail("full");
+  if(have_posts()):
+    while(have_posts()):
+      the_post();
+      get_template_part("/template-parts/content","page");
+    endwhile;
+  else:
+    get_template_part("/template-parts/content","none");
   endif;
   ?>
-
-  <div class="main-content">
-  <?php
-  $content = get_the_content(); 
-  $elements = explode("</p>", $content);
-  ?> 
+  
   </div>
 </div>
 

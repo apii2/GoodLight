@@ -171,3 +171,16 @@ function get_child_menu_items($menus, $parent_id){
 
   return $child_menus;
 }
+
+
+// function clean_wp_paragraph_blocks($content) {
+//   // Remove extra spaces between blocks
+//   $content = preg_replace('/<!-- \/wp:paragraph -->\s+<!-- wp:paragraph -->/', '<!-- /wp:paragraph --><!-- wp:paragraph -->', $content);
+  
+//   // Optionally, remove leading and trailing spaces from the content
+//   $content = trim($content);
+  
+//   return $content;
+// }
+
+// add_filter('the_content', 'clean_wp_paragraph_blocks');

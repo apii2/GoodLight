@@ -104,7 +104,7 @@
         </ul>
 
         <!-- Icon menu -->
-        <div class="collapse navbar-collapse justify-content-end absolute-menu" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-end absolute-menu d-none d-lg-block" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0 gap-3">
             <?php
             $header_right_menu_id = get_menu_id('header-right');

@@ -26,13 +26,9 @@
           </div>
         </div>
 
-        <div class="row text-white fs-2 mb-4">
-          <div class="col">
+        <div class="d-flex gap-4 text-white fs-2 mb-4">
             <i class="fa-brands fa-square-facebook"></i>
-          </div>
-          <div class="col">
             <i class="fa-brands fa-instagram"></i>
-          </div>
         </div>
 
         <div class="row">
