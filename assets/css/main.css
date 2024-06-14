@@ -8,8 +8,11 @@
 
 }
 
-body{
+body, html{
   font-family: var(--Montserrat);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .page-width{
@@ -77,6 +80,17 @@ body{
 
 .main-content {
   background-color: black;
+  color: white;
+}
+
+.profile-content{
+  top: 30%;
+  left: 7%;
+}
+
+.profile-content > p:not(:first-child){
+  font-size: 1.4rem;
+  font-weight: lighter;
   color: white;
 }
 

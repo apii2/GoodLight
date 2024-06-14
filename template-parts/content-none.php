@@ -1,3 +1,9 @@
+<?php
+/**
+ * Template for page with no content
+ */
+?>
+
 <div>
   <h1><?php esc_html_e('Content Not Found','goodlight'); ?></h1>
 

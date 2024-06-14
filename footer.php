@@ -1,4 +1,4 @@
-<footer class="container-fluid px-0 w-100">
+<footer class="container-fluid px-0 w-100 position-relative bottom-0">
   <div class="row m-0">
 
     <!-- Footer logo -->
