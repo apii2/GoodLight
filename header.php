@@ -27,8 +27,8 @@
 <div class="page-width">
 
   <!-- NavBar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid py-0 px-0 m-0">
+  <nav class="navbar navbar-expand-lg px-50 my-3">
+    <div class="container-fluid gap-2 py-0 px-0 m-0">
 
       <!-- Page logo -->
       <?php
@@ -57,7 +57,7 @@
       </button>
       <div class="collapse navbar-collapse relative-menu" id="navbarSupportedContent">
         <!-- Title menu -->
-        <ul class="navbar-nav mb-2 mb-lg-0 w-100 justify-content-end">
+        <ul class="navbar-nav mb-2 mb-lg-0 w-100 justify-content-center">
           <?php
           $header_menu_id = get_menu_id('primary');
           $header_menus = wp_get_nav_menu_items($header_menu_id);
@@ -104,24 +104,7 @@
         </ul>
 
         <!-- Icon menu -->
-        <div class="collapse navbar-collapse justify-content-end absolute-menu d-none d-lg-block" id="navbarSupportedContent">
-          <ul class="navbar-nav mb-2 mb-lg-0 gap-3">
-            <?php
-            $header_right_menu_id = get_menu_id('header-right');
-            $header_right_menus = wp_get_nav_menu_items($header_right_menu_id);
-            if (!empty($header_right_menus)):
-              foreach ($header_right_menus as $right_menu):
-                ?>
-                <li class="nav-item">
-                  <a href="<?php echo esc_url($right_menu->url); ?>" class="nav-link px-0 py-0">
-                    <i class="header-icon <?php esc_html_e(implode(" ",$right_menu->classes)); ?>"></i>
-                  </a>
-                </li>
-                <?php
-              endforeach;
-            endif;
-            ?>
-          </ul>
+        <div class="collapse navbar-collapse justify-content-end d-none d-lg-block" id="navbarSupportedContent">
         </div>
       </div>
 

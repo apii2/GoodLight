@@ -8,6 +8,10 @@
 
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body, html{
   font-family: var(--Montserrat);
   min-height: 100vh;
@@ -15,20 +19,50 @@ body, html{
   grid-template-rows: auto 1fr auto;
 }
 
-.page-width{
-  max-width: 1200px;
-  padding: 0 3.125rem;
+.px-50{
+  padding: 0 13%;
 }
 
-@media screen and (min-width: 1200px) {
-  .page-width{
-    margin: 0 auto;
+@media screen and (min-width: 1400px) {
+  .px-50{
+    padding: 0 25%;
   }
 }
 
-/* Navbar style */
-.navbar{
-  padding: 0.625rem 0;
+.ps-26{
+  padding-left: 26%;
+}
+
+@media screen and (min-width: 1400px) {
+  .ps-26{
+    padding-left: 50%;
+  }
+}
+
+.pe-26{
+  padding-right: 26%;
+}
+
+@media screen and (min-width: 1400px) {
+  .pe-26{
+    padding-right: 50%;
+  }
+}
+
+.grid-col-50{
+  grid-template-columns: 50% 50%;
+}
+
+.min-h-screen{
+  min-height: 100vh;
+}
+
+.h-screen{
+  height: 100vh;
+}
+
+.max-h-screen{
+  max-height: 100vh;
 }
 
 .navbar > div .navbar-brand{
@@ -39,19 +73,21 @@ body, html{
   width: 60%;
 }
 
-.navbar .relative-menu{
+/* .navbar .relative-menu{
   position: relative;
-}
+} */
 
-.navbar .relative-menu > ul{
+/* .navbar .relative-menu > ul{
   padding-right: 5.9375rem;
-}
+} */
+
+
 
 .navbar .navbar-nav .menu-title{
   color: var(--secondary-color);
   font-size: 0.9375rem;
   font-weight: 500;
-  padding: 0.3125rem;
+  /* padding: 0.3125rem; */
 }
 
 .navbar .icon .slide-down{
@@ -60,12 +96,12 @@ body, html{
   vertical-align: middle;
   color: var(--secondary-color);
 }
-
+/* 
 .navbar .absolute-menu {
   position: absolute;
   right: 0;
   background-color: white;
-}
+} */
 
 .navbar .nav-item .header-icon{
   font-size: 20px;
@@ -73,12 +109,18 @@ body, html{
 }
 
 /* Front page */
-.main-front img{
+.wp-block-image img,.wp-block-image figure{
+  height: inherit;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* .main-front img{
   width: 100%;
   max-height: 50rem;
-} 
+}  */
 
-.main-content {
+/* .main-content {
   background-color: black;
   color: white;
 }
@@ -92,7 +134,7 @@ body, html{
   font-size: 1.4rem;
   font-weight: lighter;
   color: white;
-}
+} */
 
 /* Footer style */
 footer{

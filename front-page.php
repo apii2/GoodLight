@@ -10,7 +10,7 @@ function dd($value){
 get_header();
 ?>
 
-<div class="main-front page-width">
+<div class="main-front">
   <?php
   if(have_posts()):
     while(have_posts()):
