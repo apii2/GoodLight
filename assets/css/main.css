@@ -19,6 +19,55 @@ body, html{
   grid-template-rows: auto 1fr auto;
 }
 
+/* Navbar */
+.navbar > div .navbar-brand{
+  width: 16%;
+}
+
+.navbar .header-logo{
+  width: 60%;
+}
+
+/* .navbar .relative-menu{
+  position: relative;
+} */
+
+/* .navbar .relative-menu > ul{
+  padding-right: 5.9375rem;
+} */
+
+.navbar .navbar-nav .menu-title{
+  color: var(--secondary-color);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  /* padding: 0.3125rem; */
+}
+
+.navbar .icon .slide-down{
+  width: 8px;
+  font-size: 8px;
+  vertical-align: middle;
+  color: var(--secondary-color);
+}
+/* 
+.navbar .absolute-menu {
+  position: absolute;
+  right: 0;
+  background-color: white;
+} */
+
+.navbar .nav-item .header-icon{
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+/* Front page */
+.wp-block-image img,.wp-block-image figure{
+  height: inherit;
+  object-fit: cover;
+  width: 100%;
+}
+
 .px-50{
   padding: 0 13%;
 }
@@ -65,77 +114,6 @@ body, html{
   max-height: 100vh;
 }
 
-.navbar > div .navbar-brand{
-  width: 16%;
-}
-
-.navbar .header-logo{
-  width: 60%;
-}
-
-/* .navbar .relative-menu{
-  position: relative;
-} */
-
-/* .navbar .relative-menu > ul{
-  padding-right: 5.9375rem;
-} */
-
-
-
-.navbar .navbar-nav .menu-title{
-  color: var(--secondary-color);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  /* padding: 0.3125rem; */
-}
-
-.navbar .icon .slide-down{
-  width: 8px;
-  font-size: 8px;
-  vertical-align: middle;
-  color: var(--secondary-color);
-}
-/* 
-.navbar .absolute-menu {
-  position: absolute;
-  right: 0;
-  background-color: white;
-} */
-
-.navbar .nav-item .header-icon{
-  font-size: 20px;
-  color: var(--primary-color);
-}
-
-/* Front page */
-.wp-block-image img,.wp-block-image figure{
-  height: inherit;
-  object-fit: cover;
-  width: 100%;
-}
-
-/* .main-front img{
-  width: 100%;
-  max-height: 50rem;
-}  */
-
-/* .main-content {
-  background-color: black;
-  color: white;
-}
-
-.profile-content{
-  top: 30%;
-  left: 7%;
-}
-
-.profile-content > p:not(:first-child){
-  font-size: 1.4rem;
-  font-weight: lighter;
-  color: white;
-} */
-
 /* Footer style */
 footer{
   background-color: var(--primary-color);
@@ -143,12 +121,34 @@ footer{
 }
 
 footer > div{
-  padding: 0 3.125rem;
+  padding: 0 6.25rem;
   gap: 6rem;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
 footer .footer-logo img{
-  width: 110%;
+  width: 200px;
+}
+
+.mb-10{
+  margin-bottom: 35px;
+}
+
+.color-white{
+  color: white;
+}
+
+.fs-35{
+  font-size: 35px;
+}
+
+.fs-14{
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .fs-md-6{
+    font-size: 0.875rem !important;
+  }
 }
