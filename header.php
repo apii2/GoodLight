@@ -37,7 +37,7 @@
 
       if (has_custom_logo()):
         printf(
-          '<a class="navbar-brand me-0 py-3" href="%1$s"><img class="header-logo w-100" width="170" src="%2$s"></a>',
+          '<a class="navbar-brand me-0 py-3" href="%1$s"><img class="header-logo w-140" width="170" src="%2$s"></a>',
           esc_url(home_url()),
           esc_url($logo[0])
         );

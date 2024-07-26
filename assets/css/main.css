@@ -28,6 +28,10 @@ body, html{
   width: 60%;
 }
 
+.w-140{
+  width: 140% !important;
+}
+
 /* .navbar .relative-menu{
   position: relative;
 } */
@@ -96,6 +100,20 @@ body, html{
   .pe-26{
     padding-right: 50%;
   }
+}
+
+.ps-43{
+  padding-left: 43%;
+}
+
+@media screen and (min-width: 1400px) {
+  .ps-43{
+    padding-left: 25%;
+  }
+}
+
+.w-60{
+  width: 60%;
 }
 
 .grid-col-50{
